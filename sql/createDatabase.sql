@@ -37,3 +37,11 @@ CREATE TABLE quotes (
   FOREIGN KEY(id_student) REFERENCES users(id),
   FOREIGN KEY(id_psychologist) REFERENCES users(id)
 );
+
+CREATE TABLE tips (
+  id INTEGER AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  id_psychologist INTEGER NOT NULL,
+  FOREIGN KEY(id_psychologist) REFERENCES users(id)
+);

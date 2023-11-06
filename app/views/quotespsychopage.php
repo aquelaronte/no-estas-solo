@@ -49,6 +49,12 @@
           ";
 
           echo "
+          <li class=\"nav-item\">
+            <a class=\"nav-link active\" href=\"tips.php\"><i class=\"fa fa-message\"></i> Consejos</a>
+          </li>
+          ";
+
+          echo "
             <li class=\"nav-item\">
               <a class=\"nav-link active\" href=\"../app/controllers/users/closeSession_c.php\"><i class=\"fa-solid fa-right-from-bracket\"></i> Cerrar sesión</a>
             </li>

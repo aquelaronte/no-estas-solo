@@ -49,10 +49,10 @@
           ";
 
           echo "
-            <li class=\"nav-item\">
-              <a class=\"nav-link active\" href=\"tips.php\"><i class=\"fa fa-message\"></i> Consejos</a>
-            </li>
-          "; 
+          <li class=\"nav-item\">
+            <a class=\"nav-link active\" href=\"tips.php\"><i class=\"fa fa-message\"></i> Consejos</a>
+          </li>
+          ";
 
           echo "
             <li class=\"nav-item\">
@@ -81,28 +81,63 @@
   </div>
 </nav>
 <div class="container">
-  <div class="row d-flex flex-row justify-content-center">
-    <div class="col-5 d-flex">
-      <h1 class="text-center mt-5">¿Necesitas ayuda psicológica?</h1>
-    </div>
-    <div style="position: absolute; width: 100vw; z-index: -1; top: 400px;">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#FAA381" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-      </svg>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col d-flex justify-content-center">
-      <i class="fa fa-star mt-4" style="font-size: 55px; color: #F5CDA7;"></i>
-    </div>
-  </div>
   <div class="row">
     <div class="col">
-      <h5 class="text-center mt-4">Con nosotros podrás encontrarla</h5>
+      <h1 class="text-center">Sobre nosotros</h1>
     </div>
   </div>
+
+  <!-- Anahí avatar -->
   <div class="row">
-    <div class="col">
+    <div class="col-3">
+      <img src="./assets/images/Anahi.jpg" alt="Avatar de anahí" class="avatar">
+    </div>
+    <div class="col-2" style="margin-right: 90px;">
+      <p>
+        <strong>
+          Anahí Quiroz Figueroa
+        </strong>
+      </p>
+      <p>Estudiante de grado 11°</p>
+      <p>Cursando actualmente técnico auxiliar laboral en desarrollo de software</p>
+    </div>
+
+  <!-- Isabella avatar -->
+    <div class="col-3">
+      <img src="./assets/images/Isabella.jpg" alt="Avatar de anahí" class="avatar">
+    </div>
+    <div class="col-2" style="margin-right: 90px;">
+      <p>
+        <strong>
+          Isabella
+        </strong>
+      </p>
+      <p>Estudiante de grado 11°</p>
+      <p>Cursando actualmente técnico auxiliar laboral en desarrollo de software</p>
+    </div>
+  </div>
+
+  <!-- Juan Manuel avatar -->
+  <div class="row mt-5 d-flex justify-content-center align-items-center flex-row">
+    <div class="col-3">
+      <img src="./assets/images/Juan manuel.jpg" alt="Avatar de anahí" class="avatar">
+    </div>
+    <div class="col-2" style="margin-right: 90px;">
+      <p>
+        <strong>
+          Juan Manuel Murillo Zea
+        </strong>
+      </p>
+      <p>Estudiante de grado 11°</p>
+      <p>Cursando actualmente técnico auxiliar laboral en desarrollo de software</p>
     </div>
   </div>
 </div>
+<style>
+  .avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    border: 1px solid black;
+  }
+</style>

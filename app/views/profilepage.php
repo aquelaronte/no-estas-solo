@@ -28,13 +28,13 @@
             </li>
           ";
 
-          if($_SESSION['user']['role'] == "estudiante"){
+          if ($_SESSION['user']['role'] == "estudiante") {
             echo "
               <li class=\"nav-item\">
                 <a class=\"nav-link active\" href=\"quotes.php\"><i class=\"fa fa-file-invoice\"></i> Citas</a>
               </li>
             ";
-          } elseif($_SESSION['user']['role'] == "psicólogo"){
+          } elseif ($_SESSION['user']['role'] == "psicólogo") {
             echo "
             <li class=\"nav-item\">
               <a class=\"nav-link active\" href=\"quotes_p.php\"><i class=\"fa fa-file-invoice\"></i> Citas</a>
@@ -46,6 +46,12 @@
             <li class=\"nav-item\">
               <a class=\"nav-link active\" href=\"aboutus.php\"><i class=\"fa fa-users\"></i> Sobre nosotros</a>
             </li>
+          ";
+
+          echo "
+          <li class=\"nav-item\">
+            <a class=\"nav-link active\" href=\"tips.php\"><i class=\"fa fa-message\"></i> Consejos</a>
+          </li>
           ";
 
           echo "
@@ -74,15 +80,64 @@
     </div>
   </div>
 </nav>
-<div class="container">
+<div class="container mt-3">
   <div class="row">
     <div class="col">
-      <h1 class="text-center">
-        ¡Bienvenido 
+      <h1 class="text-center mb-4">Tu perfil</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2">
+      <img src="https://thumbs.dreamstime.com/b/foto-de-perfil-avatar-masculino-34443055.jpg" style="height: 150px; width: 150px; border-radius: 100%; border: 1px solid black;" alt="foto de perfil anónima">
+    </div>
+    <div class="col-4">
+      <h3 class="mb-0">
+
         <?php
-          echo ucwords($_SESSION["user"]["name"]) . "!";
+        echo $_SESSION["user"]["name"]
         ?>
-      </h1>
+      </h3>
+      <p class="mb-0">
+        <?php
+        $role = "";
+
+        if ($_SESSION["user"]["role"] == "estudiante") {
+          $role = "Estudiante de grado " . $_SESSION["user"]["grade"];
+        } else {
+          $role = "Psicólogo";
+        }
+        echo $role;
+        ?>
+      </p>
+      <p class="mt-3 mb-0">
+        <strong>Teléfono: </strong>
+        <?php
+        echo $_SESSION["user"]["phone"];
+        ?>
+      </p>
+      <p>
+        <strong>
+          Correo electrónico:
+        </strong>
+        <?php
+        echo $_SESSION["user"]["email"];
+        ?>
+      </p>
+    </div>
+    <div class="col-4">
+      <h3>Sobre mi</h3>
+      <p>
+        <?php
+        echo $_SESSION["user"]["description"]
+        ?>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <a href="finished-quotes.php">
+        <button class="btn btn-primary mt-4">Ver citas atendidas</button>
+      </a>
     </div>
   </div>
 </div>

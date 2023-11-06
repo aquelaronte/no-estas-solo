@@ -10,4 +10,4 @@ require_once "../../models/quotes.php";
 $quotesModel = new QuotesModel();
 
 $response = $quotesModel->createQuote($id_student, $title, $description, $creation_date);
-header("Location: http://localhost/no%20estas%20solo/public/quotes.php");
+header("Location: ../../../public/quotes.php");

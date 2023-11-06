@@ -7,4 +7,4 @@ $notesModel = new NotesModel();
 
 $response = $notesModel->deleteNote($id);
 
-header("Location: http://localhost/no%20estas%20solo/public/notes.php");
+header("Location: ../../../public/notes.php");

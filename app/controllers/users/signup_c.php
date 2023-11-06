@@ -17,11 +17,11 @@ $verifyEmail = $_POST["verifyEmail"];
 $verifyPassword = $_POST["verifyPassword"];
 
 if ($email != $verifyEmail) {
-  header("Location: http://localhost/no%20estas%20solo/public/signup.php?message=correos-no-coinciden");
+  header("Location: ../../../public/signup.php?message=correos-no-coinciden");
 }
 
 if($password != $verifyPassword){
-  header("Location: http://localhost/no%20estas%20solo/public/signup.php?message=contraseñas-no-coinciden");
+  header("Location: ../../../public/signup.php?message=contraseñas-no-coinciden");
 }
 
 $phone = $_POST["phone"];
@@ -30,10 +30,10 @@ $grade = $_POST["grade"];
 $role = $_POST["role"];
 
 if($role == "default"){
-  header("Location: http://localhost/no%20estas%20solo/public/signup.php?message=seleccione-un-rol");
+  header("Location: ../../../public/signup.php?message=seleccione-un-rol");
 }
 if($grade == "default"){
-  header("Location: http://localhost/no%20estas%20solo/public/signup.php?message=seleccione-un-grado");
+  header("Location: ../../../public/signup.php?message=seleccione-un-grado");
 }
 
 $age = $_POST["age"];
@@ -46,8 +46,8 @@ $usersModel = new UserModel();
 $results = $usersModel->signup($name, $email, $password, $phone, $address, $grade, $role, $age, $description);
 
 if($results == "USUARIO YA REGISTRADO"){
-  header("Location: http://localhost/no%20estas%20solo/public/signup.php?message=usuario-ya-registrado");
+  header("Location: ../../../public/signup.php?message=usuario-ya-registrado");
 } else {
-  header("Location: http://localhost/no%20estas%20solo/public/signin.php");
+  header("Location: ../../../public/signin.php");
 }
 

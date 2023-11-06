@@ -181,4 +181,28 @@ class QuotesModel
 
     return $response;
   }
+
+  public function getFinishedQuotes_student($userid){
+    $this->getConnection();
+
+    $sql = "SELECT quotes.id, users.name AS name_psychologist, users.phone AS phone_psychologist, users.age AS age_psychologist, quotes.title, quotes.description, quotes.appointment_date, quotes.creation_date, quotes.state FROM quotes INNER JOIN users ON users.id = id_psychologist WHERE id_student = $userid && finished = TRUE";
+
+    $query = $this->con->query($sql);
+    $quotes = $query->fetchAll(PDO::FETCH_ASSOC);
+    $this->con = null;
+
+    return $quotes;
+  }
+
+  public function getFinishedQuotes_psychologist($userid){
+    $this->getConnection();
+
+    $sql = "SELECT quotes.id, users.name AS name_patient, users.phone AS phone_patient, users.age AS age_patient, quotes.title, quotes.description, quotes.appointment_date, quotes.creation_date, quotes.state FROM quotes INNER JOIN users ON users.id = id_student WHERE id_psychologist = $userid";
+
+    $query = $this->con->query($sql);
+    $quotes = $query->fetchAll(PDO::FETCH_ASSOC);
+    $this->con = null;
+
+    return $quotes;
+  }
 }

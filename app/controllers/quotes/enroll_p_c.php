@@ -9,6 +9,6 @@ $quotesModel = new QuotesModel();
 
 $quotesModel->enroll_psichologyst($id_quote, $id_psychologist, $appointment_date);
 
-header("Location: http://localhost/no%20estas%20solo/public/quotes_p.php");
+header("Location: ../../../public/quotes_p.php");
 
 ?>

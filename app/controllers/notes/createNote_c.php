@@ -10,4 +10,4 @@ $notesModel = new NotesModel();
 
 $response = $notesModel->createNote($id_user, $title, $description);
 
-header("Location: http://localhost/no%20estas%20solo/public/notes.php");
+header("Location: ../../../public/notes.php");

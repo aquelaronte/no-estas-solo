@@ -28,13 +28,13 @@
             </li>
           ";
 
-          if($_SESSION['user']['role'] == "estudiante"){
+          if ($_SESSION['user']['role'] == "estudiante") {
             echo "
               <li class=\"nav-item\">
                 <a class=\"nav-link active\" href=\"quotes.php\"><i class=\"fa fa-file-invoice\"></i> Citas</a>
               </li>
             ";
-          } elseif($_SESSION['user']['role'] == "psicólogo"){
+          } elseif ($_SESSION['user']['role'] == "psicólogo") {
             echo "
             <li class=\"nav-item\">
               <a class=\"nav-link active\" href=\"quotes_p.php\"><i class=\"fa fa-file-invoice\"></i> Citas</a>
@@ -46,6 +46,12 @@
             <li class=\"nav-item\">
               <a class=\"nav-link active\" href=\"aboutus.php\"><i class=\"fa fa-users\"></i> Sobre nosotros</a>
             </li>
+          ";
+
+          echo "
+          <li class=\"nav-item\">
+            <a class=\"nav-link active\" href=\"tips.php\"><i class=\"fa fa-message\"></i> Consejos</a>
+          </li>
           ";
 
           echo "
